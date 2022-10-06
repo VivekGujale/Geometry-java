@@ -1,20 +1,31 @@
 import java.util.Scanner;
 
 public class Geometry {
+
+    public static void check1(Integer x1, Integer y1, Integer x2, Integer y2) {
+        boolean result1 = x1.equals(y1);
+        System.out.println("Result is " + result1);
+        boolean result2 = x2.equals(y2);
+        System.out.println("Result is " + result2);
+    }
+
+    public static void check2(Integer x1, Integer y1, Integer x2, Integer y2) {
+        int result3 = x1.compareTo(y1);
+        System.out.println("Result is " + result3);
+        int result4 = x2.compareTo(y2);
+        System.out.println("Result is " + result4);
+
+    }
+
     public static void main(String[] args) {
         System.out.println("Welcome to Geometry");
-        Scanner obj = new Scanner(System.in);
-        System.out.println("Enter the values of x1,y1,x2,y2");
-        Integer x1 = obj.nextInt();
-        Integer y1 = obj.nextInt();
-        Integer x2 = obj.nextInt();
-        Integer y2 = obj.nextInt();
-        //If value is greater than the 0 then result will be 1.
-        //If value is less than the 0 then result will be -1.
-        //If both values are same then result will be 0.
-        int result1 = x1.compareTo(y1);
-        System.out.println("Result is " + result1);
-        int result2 = x2.compareTo(y2);
-        System.out.println("Result is " + result2);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the values for x1,y1,x2,y2");
+        Integer x1 = scanner.nextInt();
+        Integer y1 = scanner.nextInt();
+        Integer x2 = scanner.nextInt();
+        Integer y2 = scanner.nextInt();
+        Geometry.check1(x1, y1, x2, y2);
+        Geometry.check2(x1, y1, x2, y2);
     }
 }
