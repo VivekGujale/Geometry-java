@@ -9,11 +9,12 @@ public class Geometry {
         Integer y1 = obj.nextInt();
         Integer x2 = obj.nextInt();
         Integer y2 = obj.nextInt();
-        //If result is true then two lines are equal.
-        //If result is false then two lines are not equal.
-        boolean result1 = x1.equals(y1);
+        //If value is greater than the 0 then result will be 1.
+        //If value is less than the 0 then result will be -1.
+        //If both values are same then result will be 0.
+        int result1 = x1.compareTo(y1);
         System.out.println("Result is " + result1);
-        boolean result2 = x2.equals(y2);
+        int result2 = x2.compareTo(y2);
         System.out.println("Result is " + result2);
     }
 }
